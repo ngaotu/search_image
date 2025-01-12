@@ -11,19 +11,17 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
-# @app.route('/search', methods=['POST'])
-# def search():
-#     image = request.files.get('image')
-#     text = request.form.get('text')
-#     results = []
 
-#     if image:
-#         image.save("temp_image.jpg")
-#         results = image_search.search_by_image("temp_image.jpg")
-#     elif text:
-#         results = image_search.search_by_text(text)
-
-#     return jsonify(results)
+@app.route("/search", methods=["POST"])
+def search():
+    # Xử lý tìm kiếm và lấy danh sách ảnh
+    image_urls = [
+        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e01a1c145370057.629d9d0a30f4a.png",  # Thay bằng URL ảnh thật
+        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e01a1c145370057.629d9d0a30f4a.png",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e01a1c145370057.629d9d0a30f4a.png",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e01a1c145370057.629d9d0a30f4a.png"
+    ]
+    return render_template("result.html", image_urls=image_urls)
 
 if __name__ == '__main__':
     app.run(debug=True)
