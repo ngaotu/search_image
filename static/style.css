@@ -1,0 +1,71 @@
+body {
+    background-color: #f5f7fc;
+    font-family: 'Arial', sans-serif;
+}
+.search-container {
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 20px;
+}
+.search-input-group {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 25px; /* Bo tròn góc */
+    overflow: hidden; /* Ẩn phần thừa */
+}
+.search-input-group input {
+    flex: 1;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+.search-input-group .search-icon {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #888;
+}
+.search-input-group .search-icon:hover {
+    color: #333;
+}
+.file-input {
+    display: none;
+}
+.file-input-label {
+    cursor: pointer;
+    margin-left: 10px;
+    padding-right: 20px;
+    color: #888;
+}
+.file-input-label:hover {
+    color: #333;
+}
+.recent-searches .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 10px 10px;
+}
+.list-group-item-remove{
+    cursor: pointer;
+    display: none;
+}
+.recent-searches .list-group-item:hover {
+    background: #f0f2f5;
+}
+
+.image-preview {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
